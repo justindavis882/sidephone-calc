@@ -10,6 +10,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1500); // 1.5 seconds
   }
 
+  // Modal Logic
+  const aboutTrigger = document.getElementById('about-trigger');
+  const aboutModal = document.getElementById('about-modal');
+  const closeModal = document.getElementById('close-modal');
+
+  // Open Modal
+  aboutTrigger.addEventListener('click', () => {
+    aboutModal.classList.remove('hidden');
+  });
+
+  // Close Modal (Clicking the button)
+  closeModal.addEventListener('click', () => {
+    aboutModal.classList.add('hidden');
+  });
+
+  // Close Modal (Clicking the dark background outside the box)
+  aboutModal.addEventListener('click', (e) => {
+    if (e.target === aboutModal) {
+      aboutModal.classList.add('hidden');
+    }
+  });
+
   // Calculator State Machine
   const display = document.getElementById('display');
   const historyDisplay = document.getElementById('history');
