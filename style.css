@@ -140,3 +140,67 @@ body {
   text-align: left;
   padding-left: 20px;
 }
+
+/* Make the DN header text look like a clickable link */
+#about-trigger {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--btn-op); /* Uses the orange operator color to stand out */
+  padding: 5px; /* Bigger touch target */
+}
+
+/* Modal Overlay */
+.modal {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85); /* Dark semi-transparent background */
+  z-index: 200; /* Keeps it above everything else */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.modal.hidden {
+  opacity: 0;
+  pointer-events: none; /* Prevents invisible clicks */
+}
+
+/* Modal Box */
+.modal-content {
+  background-color: var(--display-bg);
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 75%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spaces out the text, link, and button */
+}
+
+.modal-content h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.modal-content p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.modal-link {
+  color: var(--btn-op);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 10px; /* Fat-finger friendly */
+}
+
+#close-modal {
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 10px;
+}
