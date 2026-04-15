@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (action === 'calculate') {
       compute();
       updateDisplay();
-    } else if (['sin', 'cos', 'tan', 'pow'].includes(action)) {
+    } else if (['sin', 'cos', 'tan', 'pow', 'sqrt', 'pi', 'log', 'ln'].includes(action)) {
       handleScientific(action);
     } else {
       // Map button actions to math symbols
