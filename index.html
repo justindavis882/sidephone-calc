@@ -16,19 +16,24 @@
     
     <header class="app-header">
       <span class="brand-small" id="about-trigger">DN</span>
-      <span class="mode-indicator">DEG</span>
+      <button class="mode-toggle" id="angle-mode">DEG</button>
     </header>
-
+    
     <div class="display-container">
       <div class="history" id="history"></div>
       <div class="display" id="display">0</div>
     </div>
-
+    
     <div class="keypad">
       <button class="btn sci-btn" data-action="sin">sin</button>
       <button class="btn sci-btn" data-action="cos">cos</button>
       <button class="btn sci-btn" data-action="tan">tan</button>
       <button class="btn sci-btn" data-action="pow">x²</button>
+      
+      <button class="btn sci-btn" data-action="sqrt">√</button>
+      <button class="btn sci-btn" data-action="pi">π</button>
+      <button class="btn sci-btn" data-action="log">log</button>
+      <button class="btn sci-btn" data-action="ln">ln</button>
       
       <button class="btn clear-btn" data-action="clear">AC</button>
       <button class="btn op-btn" data-action="delete">DEL</button>
@@ -55,7 +60,7 @@
       <button class="btn equal-btn" data-action="calculate">=</button>
     </div>
   </main>
-
+  
   <script src="app.js"></script>
 </body>
 </html>
